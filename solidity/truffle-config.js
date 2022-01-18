@@ -19,7 +19,8 @@
  */
 
  const HDWalletProvider = require('@truffle/hdwallet-provider');
- const privateKey = 'c0ddc6bf2d3a35f1afd8e8211950bc1f8037789b74dbb4c37cec2fc72e1a6bbd';
+ const privateKey = '';
+ const blockchainURL = ''
 
 //
 // const fs = require('fs');
@@ -60,7 +61,7 @@ module.exports = {
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
     ropsten: {
-    provider: () => new HDWalletProvider(privateKey, `https://ropsten.infura.io/v3/7d9028eb094342358fce426ea767401c`),
+    provider: () => new HDWalletProvider(privateKey, blockchainURL),
     network_id: 3,       // Ropsten's id
     gas: 5500000,        // Ropsten has a lower block limit than mainnet
     confirmations: 2,    // # of confs to wait between deployments. (default: 0)
